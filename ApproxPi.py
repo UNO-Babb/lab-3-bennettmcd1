@@ -1,7 +1,7 @@
 #ApproxPi.py
-#Name:
-#Date:
-#Assignment:
+#Name:Bennett McDonald
+#Date: 2/9/25
+#Assignment: aprox pie
 import math
 import time
 
@@ -9,18 +9,26 @@ import time
 #PLEASE NOTE - This is an optional, extra credit portion of the lab.
 
 def main():
-  realPi = math.pi
+    realPi = math.pi
 
-  #ask user for decimal percision (up to 10)
+    # Ask user for decimal precision (up to 10)
+    precision = int(input("Enter the decimal precision (0-10): "))
+    
+    if precision < 0 or precision > 10:
+        print("Invalid precision! Please enter a value between 0 and 10.")
+        return
 
-  start = time.time()
-  #calculate pi using the approximation technique
-  #Loop until the level of percision is reached
+    start = time.time()
 
-  end = time.time()
+    # Calculate pi using the approximation technique
+    pi_approximation = calculate_pi(precision)
 
-  elapsedTime = end - start
-  print(elapsedTime)
+    end = time.time()
+
+    elapsedTime = end - start
+    print(f"Calculated Pi: {pi_approximation}")
+    print(f"Real Pi: {realPi}")
+    print(f"Elapsed time: {elapsedTime:.6f} seconds")
 
 if __name__ == '__main__':
-  main()
+    main()
