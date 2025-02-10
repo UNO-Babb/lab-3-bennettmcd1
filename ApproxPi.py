@@ -21,13 +21,13 @@ def main():
     start = time.time()
 
     # Calculate pi using the approximation technique
-    pi_approximation = calculate_pi(precision)
+    pi_approximation = input(precision)
 
     end = time.time()
 
     elapsedTime = end - start
     print(f"Calculated Pi: {pi_approximation}")
-    print(f"Real Pi: {realPi}")
+    print(f"Real Pi: {3.141592653589793}")
     print(f"Elapsed time: {elapsedTime:.6f} seconds")
 
 if __name__ == '__main__':
