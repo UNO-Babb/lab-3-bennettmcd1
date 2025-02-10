@@ -1,7 +1,7 @@
 #TempConvert.py
-#Name:
-#Date:
-#Assignment:
+#Name: Bennett McDonald
+#Date: 2/9/25 
+#Assignment: temp convert
 
 
 def main():
@@ -10,7 +10,7 @@ def main():
   #Output converted temperature.
   tempF = 80
 
-  tempC = tempF / 2
+  tempC = (tempF - 32) * 5.0/9.0
 
   print(tempF, "is ", tempC, "degrees celsius.")
 if __name__ == '__main__':
